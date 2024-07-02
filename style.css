@@ -1,6 +1,241 @@
-h1{
-    justify-self: center;
-    color: red;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 5rem;
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Cookie&family=Kaushan+Script&family=Lobster+Two:ital,wght@1,700&family=Mooli&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background: url(images/hero-1.jpg) no-repeat;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+}
+
+section nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    background: rbga(0,0,0,0,2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+section nav .logo img{
+    width: 80px;
+    height: 80px;
+    right: -50px;
+    background-size: cover;
+    cursor: pointer;
+    margin: 7px 0;
+    position: relative;
+    justify-content: center;
+    display: flex;
+    align-content: center;
+}
+
+section nav ul{
+    list-style: none;
+}
+
+section nav ul li{
+    
+    display: inline-block;
+    margin: 0 15px;
+}
+
+section nav ul li a{
+    text-decoration: none;
+    font-family: 'Mooli', cursive;
+    color: white;
+    font-weight: 500;
+    font-size: 25px;
+    transition: 0.1s;
+}
+
+section nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #ffb600;
+    display: block;
+    transition: 0.2s linear;
+}
+
+section nav ul li a:hover::after{
+    width: 100%;
+}
+
+section nav ul li a:hover{
+    color: #ffb600;
+}
+
+section nav .icon i{
+    font-size: 25px;
+    color: white;
+    margin: 0 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+section nav .icon i:hover{
+    color: #ffb600;
+}
+
+section .main{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    top: 170px;
+    right: 400px;
+}
+
+section .main .men_text p:nth-child(1){
+    font-size: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /*font-family: 'Lobster Two', cursive;*/
+    position: relative;
+    top: -5px;
+    left: 110px;
+    color: aliceblue;
+    letter-spacing: 1px;
+    font-style: italic;
+}
+
+section .main .men_text h1{
+    font-size: 60px;
+    font-family: 'Lobster Two', cursive;
+    position: relative;
+    top: 35px;
+    left: 110px;
+    color: aliceblue;
+}
+
+section .main .men_text h1 span{
+    color: #ffb600;
+    padding-left: 20px;
+    line-height: 22px;
+    font-size: 100px;
+    font-family: 'Kaushan Script', cursive;
+}
+
+section .main .men_text p:nth-child(3){
+    font-size: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: relative;
+    top: 65px;
+    left: 110px;
+    color: aliceblue;
+    letter-spacing: 1px;
+    font-style: italic;
+}
+
+section p{
+    width: 650px;
+    text-align: justify;
+    position: relative;
+    left: 150px;
+    bottom: 120px;
+    letter-spacing: 1px;
+    line-height: 23px;
+    top: 290px;
+    color: aliceblue;
+}
+
+section .main_btn button{
+    position: relative;
+    width: 150px;
+    padding: 9px 25px;
+    text-align: center;
+    border: 2px solid orange;
+    background: transparent;
+    color: #fff;
+    border-radius: 50px;
+    left: 150px;
+    bottom: -330px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+section .main_btn button a{
+    position: relative;
+    width: 150px;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    margin-right: 8px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+section .main_btn button a{
+    position: relative;
+    width: 150px;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    margin-right: 8px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+section .main_btn i{
+    position: relative;
+    left: 115px;
+    bottom: -330px;
+    color: white;
+    transition: 0.3s;
+}
+
+section .main_btn:hover i{
+    border-radius: -1px;
+    shape-outside: margin-box;
+    transform: translate(10px);
+}
+
+section .main_btn button span{
+    background: orange;
+    height: 100%;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+section .main_btn button:hover span{
+    width: 100%;
+}
+
+section .media{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    width: 40px;
+    height: 200px;
+    left: 0;
+    font-size: 25px;
+    top: -60px;
+}
+
+section .media i:hover{ 
+    color: orange;
 }
